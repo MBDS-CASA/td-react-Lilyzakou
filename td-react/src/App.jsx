@@ -43,7 +43,8 @@ function MainContent() {
 
 
 
-function Footer () {
+function Footer() {
+    const year = new Date().getFullYear();
     return (
         <footer
             style={{
@@ -52,9 +53,10 @@ function Footer () {
                 width: "100%",
             }}
         >
-            <p>Tous droits réservés - Issa Zakou Halima</p>
+            <p>© {year} - Issa Zakou Halima, Tous droits réservés.</p>
         </footer>
-    )}
+    );
+}
 function App() {
     const [count, setCount] = useState(0)
 
