@@ -4,6 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
+
+
+
+
 function Header(){
     return (
         <header style={{textAlign: "center", margin: "20px 0"}}>
@@ -17,6 +21,26 @@ function Header(){
         </header>
     )
 }
+
+
+
+function MainContent() {
+    const now = new Date();
+    const day = now.toLocaleString('default', { weekday: 'long' });
+    const month = now.toLocaleString('default', { month: 'long' });
+    const date = now.getDate();
+    const year = now.getFullYear();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    return (
+        <div style={{ textAlign: 'center', margin: '20px 0' }}>
+            <p>Bonjour, on est le {day}, {date} {month} {year} et il est {hours}:{minutes}:{seconds}</p>
+        </div>
+    );
+}
+
 
 
 function Footer () {
@@ -58,6 +82,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+            <MainContent />
             <Footer/>
     </>
 
