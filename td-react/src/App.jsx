@@ -6,24 +6,31 @@ import './App.css'
 
 function Header(){
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <header style={{textAlign: "center", margin: "20px 0"}}>
+            <img
+                src="/src/assets/logo.png"
+                alt="Logo Formation"
+                style={{width: "100px"}}
+            />
+            <h1>Introduction à React</h1>
+            <h2>A la découverte des premières notions de React</h2>
+        </header>
     )
 }
+
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
+    return (
+        <>
+            <div>
 
-          <Header/>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+                <Header/>
+                <a href="https://vite.dev" target="_blank">
+                    <img src={viteLogo} className="logo" alt="Vite logo"/>
+                </a>
+                <a href="https://react.dev" target="_blank">
+                    <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
       <h1>Vite + React</h1>
