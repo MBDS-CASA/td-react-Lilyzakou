@@ -18,6 +18,19 @@ function Header(){
     )
 }
 
+
+function Footer () {
+    return (
+        <footer
+            style={{
+                textAlign: "center",
+                bottom: "10px",
+                width: "100%",
+            }}
+        >
+            <p>Tous droits réservés - Issa Zakou Halima</p>
+        </footer>
+    )}
 function App() {
     const [count, setCount] = useState(0)
 
@@ -45,7 +58,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+            <Footer/>
     </>
+
   )
 }
 
